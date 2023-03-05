@@ -29,7 +29,7 @@ export const createPost: RequestHandler = async (req, res, next) => {
             data: {
                 name,
                 prompt,
-                photo: photoRes.url
+                photo: photoRes.secure_url
             }
         })
         res.status(201).json({ success: true, message: "Image Uploaded SuccessFully 🔥", post })
